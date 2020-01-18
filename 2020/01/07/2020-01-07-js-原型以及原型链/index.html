@@ -78,6 +78,8 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
+  <meta name="keywords" content="js," />
+
 
 
 
@@ -92,16 +94,20 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="原型以及原型链原型对象每一个函数都有一个原型对象，函数可以通过prototype属性进行访问，通过new的方式继承原型中的属性以及方法。 首先看一段代码： 1234function Foo()&amp;#123;&amp;#125; &#x2F;&#x2F;构造函数，首字母大写Foo.prototype.type &#x3D; &quot;FooType&quot;;var foo &#x3D; new Foo();console.log(foo.type); &#x2F;&#x2F;Foo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://cactus1102.club/2019/12/31/hello-world/index.html">
+<meta property="og:title" content="js-原型以及原型链">
+<meta property="og:url" content="http://cactus1102.club/2020/01/07/2020-01-07-js-%E5%8E%9F%E5%9E%8B%E4%BB%A5%E5%8F%8A%E5%8E%9F%E5%9E%8B%E9%93%BE/index.html">
 <meta property="og:site_name" content="D&amp;X&#39;s STUDIO">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="article:published_time" content="2019-12-30T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-01-10T01:35:59.779Z">
+<meta property="og:description" content="原型以及原型链原型对象每一个函数都有一个原型对象，函数可以通过prototype属性进行访问，通过new的方式继承原型中的属性以及方法。 首先看一段代码： 1234function Foo()&amp;#123;&amp;#125; &#x2F;&#x2F;构造函数，首字母大写Foo.prototype.type &#x3D; &quot;FooType&quot;;var foo &#x3D; new Foo();console.log(foo.type); &#x2F;&#x2F;Foo">
+<meta property="og:image" content="https://i.loli.net/2020/01/18/oJgd3WxrLTGvXEt.png">
+<meta property="og:image" content="https://i.loli.net/2020/01/18/rP5XN3cFnjRKlCS.jpg">
+<meta property="article:published_time" content="2020-01-06T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-01-18T10:07:52.435Z">
 <meta property="article:author" content="D&amp;X">
+<meta property="article:tag" content="js">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/01/18/oJgd3WxrLTGvXEt.png">
 
 
 
@@ -130,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://cactus1102.club/2019/12/31/hello-world/"/>
+  <link rel="canonical" href="http://cactus1102.club/2020/01/07/2020-01-07-js-原型以及原型链/"/>
 
 
 
 
 
-  <title>Hello World | D&X's STUDIO</title>
+  <title>js-原型以及原型链 | D&X's STUDIO</title>
   
 
 
@@ -269,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cactus1102.club/2019/12/31/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://cactus1102.club/2020/01/07/2020-01-07-js-%E5%8E%9F%E5%9E%8B%E4%BB%A5%E5%8F%8A%E5%8E%9F%E5%9E%8B%E9%93%BE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="D&X">
@@ -286,7 +292,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">js-原型以及原型链</h1>
         
 
         <div class="post-meta">
@@ -298,8 +304,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-31T00:00:00+08:00">
-                2019-12-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-07T00:00:00+08:00">
+                2020-01-07
               </time>
             
 
@@ -308,6 +314,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/" itemprop="url" rel="index">
+                    <span itemprop="name">js</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -336,19 +364,23 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <h1 id="原型以及原型链"><a href="#原型以及原型链" class="headerlink" title="原型以及原型链"></a>原型以及原型链</h1><h2 id="原型对象"><a href="#原型对象" class="headerlink" title="原型对象"></a>原型对象</h2><p>每一个函数都有一个原型对象，函数可以通过prototype属性进行访问，通过new的方式继承原型中的属性以及方法。</p>
+<p>首先看一段代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>)</span>&#123;&#125; <span class="comment">//构造函数，首字母大写</span></span><br><span class="line">Foo.prototype.type = <span class="string">"FooType"</span>;</span><br><span class="line"><span class="keyword">var</span> foo = <span class="keyword">new</span> Foo();</span><br><span class="line"><span class="built_in">console</span>.log(foo.type); <span class="comment">//FooType</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>上述代码段中，Foo函数通过prototype属性访问Foo函数的原型对象，并使用new方式创建了Foo的实例foo，foo继承了Foo函数中定义在原型对象上的type属性，具体看下图：</p>
+<p><img src="https://i.loli.net/2020/01/18/oJgd3WxrLTGvXEt.png" alt="img_0187.png"></p>
+<blockquote>
+<p>foo中没有type属性，但在foo中有隐式原型属性<code>__proto__</code>来访问原型对象，type在原型对象中，所以通过原型链，可以返回<code>foo.type</code>的值。</p>
+</blockquote>
+<h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><p>原型链是对象的原型链，原型链上每一个结点都是对象，通过new方式的都的实例有隐式原型属性<code>__proto__</code>可以访问到构造函数的原型对象。</p>
+<p>在上述代码中，访问<code>foo.type</code>时，会在foo下中寻找是否有type属性，如果没有，那么就在<code>foo.__proto__</code>下寻找，当前在<code>foo.__proto__</code>下找到type属性，输出type值，这就构成了一个链条。</p>
+<blockquote>
+<p>foo访问一个非自有属性或者方法，会首先在foo中寻找是否有这个属性或者方法，如果没有那么会在原型对象中寻找即在<code>foo.__proto__</code>下寻找，如果在<code>foo.__proto__</code>下没有找到，那么就会去<code>foo.__proto__.__proto__</code>下寻找，直到找到值或者<code>foo.__proto__.__proto__....</code>的值为null为止。</p>
+</blockquote>
+<p>一切函数的构造函数都指向Object类型的原型对象，Object类型的原型对象的隐式原型属性<code>__proto__</code>值为null，及是原型链的终点。具体如下图所示：</p>
+<p><img src="https://i.loli.net/2020/01/18/rP5XN3cFnjRKlCS.jpg" alt="fullsizerender.jpg"></p>
+<p>以上，后续会进行一些地方的更改以及更新原型的实际应用。</p>
 
       
     </div>
@@ -364,6 +396,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/js/" rel="tag"># js</a>
+          
+        </div>
+      
 
       
       
@@ -373,15 +411,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2020/01/02/2020-01-02-js%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E2%80%94%E2%80%94%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="next" title="js高级程序设计——读书笔记">
+                <i class="fa fa-chevron-left"></i> js高级程序设计——读书笔记
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/01/01/2020-01-01-%E5%8D%9A%E5%AE%A2%E9%87%8D%E5%BB%BA/" rel="prev" title="博客重建">
-                博客重建 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -533,7 +571,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#原型以及原型链"><span class="nav-number">1.</span> <span class="nav-text">原型以及原型链</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#原型对象"><span class="nav-number">1.1.</span> <span class="nav-text">原型对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原型链"><span class="nav-number">1.2.</span> <span class="nav-text">原型链</span></a></li></ol></li></ol></div>
             
 
           </div>
